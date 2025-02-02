@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.conteneur {
+    background-color: white;
+    width: 90vw;
+    padding: 50px 30px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+button {
+    height: 28px;
+    width: 28px;
+    display: grid;
+    place-items: center;
+    border: none;
+    background-color: white;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+select {
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 3px;
+    height: 28px;
+}
+
+.option label,
+.option select {
+    font-family: "Poppins", sans-serif;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 40px;
+    height: 28px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border-radius: 15px;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px black;
+}
+
+input[type="color"]::-moz-color-swatch {
+    border-radius: 15px;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px black;
+}
+
+/* Conteneur des pages */
+#text-input {
+    margin-top: 20px;
+    padding: 20px;
+    height: 50vh;
+    width: 90vw;
+}
+
+/* Style pour chaque page */
+.page {
+    width: 100%;
+    min-height: 1056px; /* Hauteur standard d'une page A4 */
+    background-color: white;
+    padding: 96px 72px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.page:focus {
+    outline: none;
+}
+
+/* Styles pour les titres et paragraphes */
+.page h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.page h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.page h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+.page h4 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.page h5 {
+    font-size: 0.83em;
+    font-weight: bold;
+}
+
+.page h6 {
+    font-size: 0.67em;
+    font-weight: bold;
+}
+
+.page p {
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+.active {
+    background-color: red;
+}
+
+/* Style pour le trait */
+.trait {
+    position: relative;
+    top: 3px;
+    height: 5px;
+    width: 19px;
+    border-radius: 3px 3px 0 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Style pour le trait actif */
+.trait-active {
+    background-color: #007bff;
+}
+
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+
+    .conteneur {
+        display: none;
+    }
+
+    .page {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+}

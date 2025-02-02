@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editeur de texte</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+  </style>
+</head>
+<body>
+    <div class="conteneur">
+        <div class="options">
+            <!-- Format de texte -->
+             <button id="bold" class="option-button format">
+                <i class="fa-solid fa-bold"></i>
+                <span class="trait"></span>
+             </button>
+             <button id="italic" class="option-button format">
+                <i class="fa-solid fa-italic"></i>
+                <span class="trait"></span>
+             </button>
+             <button id="underline" class="option-button format">
+                <i class="fa-solid fa-underline"></i>
+                <span class="trait"></span>
+             </button>
+             <button id="strikethrough" class="option-button format">
+                <i class="fa-solid fa-strikethrough"></i>
+                <span class="trait"></span>
+             </button>
+             <button id="superscript" class="option-button script">
+                <i class="fa-solid fa-superscript"></i>
+                <span></span>
+             </button>
+             <button id="subscript" class="option-button script">
+                <i class="fa-solid fa-subscript"></i>
+                <span></span>
+             </button>
+             <!-- Liste -->
+             <button id="insertOrderedList" class="option-button">
+               <i class="fa-solid fa-list-ol"></i>
+               <span></span>
+             </button>
+             <button id="insertUnorderedList" class="option-button">
+               <i class="fa-solid fa-list"></i>
+               <span></span>
+             </button>
+              <!-- annulation/retablissement  -->
+             <button id="undo" class="option-button">
+               <i class="fa-solid fa-rotate-left"></i>
+               <span></span>
+             </button>
+             <button id="redo" class="option-button">
+               <i class="fa-solid fa-rotate-right"></i>
+               <span></span>
+             </button>
+             <!-- Lien -->
+             <button id="createLink" class="adv-option-button">
+               <i class="fa-solid fa-link"></i>
+               <span></span>
+             </button>
+             <button id="unLink" class="adv-option-button">
+               <i class="fa-solid fa-unlink"></i>
+               <span></span>
+             </button>
+             <!-- Alignement -->
+              <!-- Utlisation de excommand pour le ids -->
+             <button id="justifyLeft" class="option-button align">
+               <i class="fa-solid fa-align-left"></i>
+             </button>
+             <button id="justifyCenter" class="option-button align">
+               <i class="fa-solid fa-align-center"></i>
+             </button>
+             <button id="justifyRight" class="option-button align">
+               <i class="fa-solid fa-align-right"></i>
+             </button>
+             <button id="justifyFull" class="option-button align">
+               <i class="fa-solid fa-align-justify"></i>
+             </button>
+             <!-- Indentation -->
+             <button id="indent" class="option-button espace">
+               <i class="fa-solid fa-indent"></i>
+             </button>
+             <button id="outdent" class="option-button espace">
+               <i class="fa-solid fa-outdent"></i>
+             </button>
+             <!-- Les titres -->
+             <select id="formatDeFormat" class="adv-option-button">
+              <option value="p">Paragraphe</option>
+              <option value="h1">H1</option>
+              <option value="h2">H2</option>
+              <option value="h3">H3</option>
+              <option value="h4">H4</option>
+              <option value="h5">H5</option>
+              <option value="h6">H6</option>
+             </select>
+
+              <!-- font -->
+               <select  id="fontName" class="adv-option-button">
+
+               </select>
+               <select  id="fontSize" class="adv-option-button">
+
+               </select>
+
+               <!-- couleur -->
+
+               <div class="input-wrapper">
+                <input type="color"  id="foreColor" class="adv-option-button">
+                <label for="foreColer">Font Couleur</label>
+               </div>
+               <div class="input-wrapper">
+                <input type="color" id="backColor" class="adv-option-button">
+                <label for="backColor">Background Couleur</label>
+               </div>
+        </div>
+    </div>
+    
+    <div class=".pages-container">
+      <div id="text-input" class="page" contenteditable="true"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
