@@ -37,8 +37,4 @@ Ce projet est un éditeur de texte web simple, permettant de formater du texte, 
 
 ## Auteurs
 
-- Projet réalisé par Mahamane.
-
----
-
-> Pour toute question ou amélioration, modifie les fichiers ou contacte
+- Projet réalisé par Mahamane
